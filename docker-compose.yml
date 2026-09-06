@@ -19,3 +19,6 @@ services:
       - REDIRECT_URI=${REDIRECT_URI}
       - INTERNAL_SECRET_TOKEN=${INTERNAL_SECRET_TOKEN}
       - PORT=3000
+volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
