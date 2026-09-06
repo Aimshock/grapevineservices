@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  grapevine-bot:
+    build: .
+    container_name: grapevine-bot
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - CLIENT_ID=${CLIENT_ID}
+      - VERIFIED_ROLE_ID=${VERIFIED_ROLE_ID}
+      - ROBLOX_OPEN_CLOUD_KEY=${ROBLOX_OPEN_CLOUD_KEY}
+      - ROBLOX_UNIVERSE_ID=${ROBLOX_UNIVERSE_ID}
+      - ROBLOX_MAIN_GROUP_ID=${ROBLOX_MAIN_GROUP_ID}
+      - ROBLOX_OAUTH_CLIENT_ID=${ROBLOX_OAUTH_CLIENT_ID}
+      - ROBLOX_OAUTH_CLIENT_SECRET=${ROBLOX_OAUTH_CLIENT_SECRET}
+      - REDIRECT_URI=${REDIRECT_URI}
+      - INTERNAL_SECRET_TOKEN=${INTERNAL_SECRET_TOKEN}
+      - PORT=3000
